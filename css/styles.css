@@ -493,14 +493,24 @@ nav {
     background: var(--white);
     max-width: 370px;
     position: relative;
+    overflow: hidden;
 }
 
 img {
     width: 100%;
 }
 
+.portfolio-section__project-container{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
 .portfolio-section__project-info {
     padding: 20px 23px;
+    position: relative;
+    z-index: 2;
 }
 
 .portfolio-section__project-title {
@@ -531,8 +541,15 @@ img {
     opacity: 0.9;
     transition-property: transform;
     background-color: var(--blue);
+    z-index: 1;
+}
+.description{
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
     color: var(--white);
-    padding: 63px 24px; 
+    padding: 63px 24px;
+    background: rgba(33, 150, 243, 0.9);
 }
 
 .portfolio-section__project-item:hover .portfolio-section__project-description,
