@@ -86,15 +86,44 @@ nav {
 .site-header__nav-item {
     font-weight: 500;
     letter-spacing: 0.02em;
+    position: relative;
 }
 
 .site-header__nav-item a {
     transition: color 300ms ease-in-out;
+    position: relative;
+    padding-bottom: 32px;
 }
 
 .site-header__nav-item a:hover,
 .site-header__nav-item a:focus {
     color: var(--blue);
+}
+
+.site-header__nav-item a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--blue);
+    position: absolute;
+    border-radius: 2px;
+}
+
+.site-header__nav-item a:hover::after,
+.site-header__nav-item a:focus::after {
+    width: 100%;
+}
+
+.site-header__nav-item a.active {
+    color: var(--blue);
+}
+
+.site-header__nav-item a.active::after {
+    width: 100%;
+    background-color: var(--blue);
 }
 
 .site-header__contact-list {
