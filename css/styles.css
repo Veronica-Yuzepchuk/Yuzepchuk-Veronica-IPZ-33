@@ -358,7 +358,7 @@ nav {
     border-radius: 50%;
     color: var(--icon);
     fill: currentColor;
-    transition: all 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 
 .clients {
