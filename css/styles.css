@@ -42,6 +42,10 @@ h1, h2, h3, h4, p, ul, ol {
     padding: 0;
 }
 
+img {
+    display: block;
+}
+
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -139,6 +143,8 @@ nav {
 }
 
 .site-header__contact-item a {
+    display: flex;
+    align-items: center;
     transition: color 300ms ease-in-out;
 }
 
@@ -149,7 +155,6 @@ nav {
 
 .site-header-icon {
     margin-right: 10px;
-    align-self: center;
     fill: currentColor;
 }
 
@@ -263,7 +268,6 @@ nav {
 
 .services-section__item {
     position: relative;
-    height: 294px;
 }
 
 .services-section__background{
@@ -512,10 +516,6 @@ nav {
     margin-bottom: 50px;
 }
 
-.portfolio-section__button-item {
-    color: var(--black);
-    background: var(--white_button);
-}
 
 .portfolio-section__button {
     text-align: center;
@@ -526,6 +526,9 @@ nav {
     letter-spacing: 0.03em;
     transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
     border: none;
+    border-radius: 4px;
+    color: var(--black);
+    background: var(--white_button);
 }
 
 .portfolio-section__button:hover,
@@ -663,13 +666,18 @@ img {
     background-color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    
+    color: var(--black);
+
     cursor: pointer;
-    transition: background-color 250ms ease, transform 250ms ease;
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+.modal_button:hover {
+    color: var(--blue);
 }
 
 .modal_icon {
     width: 18px;
     height: 18px;
-    fill: var(--black);
+    fill: currentColor;
 }
