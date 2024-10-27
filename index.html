@@ -22,13 +22,13 @@
         <nav class="site-header__nav">
             <ul class="site-header__nav-list">
                 <li class="site-header__nav-item">
-                    <a href="index.html">Студія</a>
+                    <a href="index.html" class="site-header__nav-link active">Студія</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="portfolio.html">Портфоліо</a>
+                    <a href="portfolio.html" class="site-header__nav-link">Портфоліо</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="#">Контакти</a>
+                    <a href="#" class="site-header__nav-link">Контакти</a>
                 </li>
             </ul>
         </nav>
@@ -58,7 +58,7 @@
             <h1 class="hero-section__title">
                 Ефективні рішення для вашого бізнесу
             </h1>
-            <button type="button" class="hero-section__button">Замовити</button>
+            <button type="button" class="hero-section__button" data-modal-open>Замовити</button>
         </div>
     </section>
 
@@ -130,12 +130,21 @@
             <ul class="services-section__list">
                 <li class="services-section__item">
                     <img src="images/coding.jpg" width="370" height="294" alt="Кодинг">
+                    <div class="services-section__background">
+                        <p class="services-section__text">Десктопні додатки</p>
+                    </div>
                 </li>
                 <li class="services-section__item">
                     <img src="images/design.jpg" width="370" height="294" alt="Дизайн">
+                    <div class="services-section__background">
+                        <p class="services-section__text">Мобільні додатки</p>
+                    </div>    
                 </li>
                 <li class="services-section__item">
                     <img src="images/color-design.jpg" width="370" height="294" alt="Кольоровий дизайн">
+                    <div class="services-section__background">
+                        <p class="services-section__text">Дизайнерські рішення</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -442,6 +451,13 @@
 
     </div>
 </footer>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal_button" data-modal-close> <svg class="modal_icon">
+            <use href="./images/svg/icons.svg#icon-close"></use></svg></button>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 
 </body>
 </html>
